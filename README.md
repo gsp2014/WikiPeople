@@ -1,10 +1,10 @@
 ## WikiPeople: An n-ary relational dataset derived from Wikidata
 
 
-WikiPeople is constructed as follows:
-+ The [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) is downloaded and the facts concerning entities of type `human` are extracted. Further, each fact was parsed into a set of its role-value pairs.
-+ Then, these facts are denoised. For example, facts containing role related to images are filtered out, and facts containing value in {*unknown value*, *no values*} are removed.
-+ Subsequently, the subsets of values and roles which have at least 30 mentions are selected. And the facts related to these values and roles are kept.
+WikiPeople was constructed as follows:
++ The [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) was downloaded and the facts concerning entities of type `human` were extracted. Further, each fact was parsed into a set of its role-value pairs.
++ Then, these facts were denoised. For example, facts containing role related to images were filtered out, and facts containing value in {*unknown value*, *no values*} were removed.
++ Subsequently, the subsets of values and roles which have at least 30 mentions were selected. And the facts related to these values and roles were kept.
 + The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%:10%: 10%.
 
 
