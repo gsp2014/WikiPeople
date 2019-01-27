@@ -2,9 +2,9 @@
 
 
 WikiPeople is constructed as follows:
-+ We downloaded the [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) and extracted the facts concerning entities of type `human`. Further, each fact was parsed into a set of its role-value pairs.
++ The [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) is downloaded and the facts concerning entities of type `human` are extracted. Further, each fact was parsed into a set of its role-value pairs.
 + Then, these facts are denoised. For example, facts containing role related to images are filtered out, and facts containing value in {*unknown value*, *no values*} are removed.
-+ Subsequently, we selected the subsets of values and roles which have at least 30 mentions. And the facts related to these values and roles are kept.
++ Subsequently, the subsets of values and roles which have at least 30 mentions are selected. And the facts related to these values and roles are kept.
 + The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%:10%: 10%.
 
 
