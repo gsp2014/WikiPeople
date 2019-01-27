@@ -1,6 +1,22 @@
 ## WikiPeople: An n-ary relational dataset derived from Wikidata
 
 
+WikiPeople is constructed as follows:
++ We downloaded the [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) and extracted the facts concerning entities of type `human`. Further, each fact was parsed into a set of its role-value pairs.
++ Then, these facts are denoised. For example, facts containing role related to images are filtered out, and facts containing value in {*unknown value*, *no values*} are removed.
++ Subsequently, we selected the subsets of values and roles which have at least 30 mentions. And the facts related to these values and roles are kept.
++ The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%: 10%:10%.
+
+
+The statistics of WikiPeople are displayed as follows, where #Train, #Valid and #Test are the sizes of the training set, the validation set and the test set, respectively.
+
+|  | Binary | N-ary | Overall |
+| :-: | :-: | :-: | :-: |
+| #Train | 270,179 | 35,546 | 305,725 |
+| #Valid | 33,845 | 4,378 | 38,223 |
+| #Test | 33,890 | 4,391 | 38,281 |
+
+
 The training facts, validation facts and test facts stored in the files `n-ary_train.json`, `n-ary_valid.json` and `n-ary_test.json`, respectively, are in the same format. Each line therein is a set of ("role id": "value id/list of value ids") and the arity information in form of ("N": arity), corresponding to a fact in Wikidata about a certain person. Note that all the ids, except the ones that end with "_h" or "_t", are directly adopted from Wikidata. The two types of ids ending with "_h" or "_t" are defined by WikiPeople.
 
 ### A fact example of WikiPeople
@@ -20,7 +36,7 @@ This example corresponds to the fact in [Wikidata](https://www.wikidata.org/wiki
 
 The detailed description of `Line 37714` is as follows (items newly defined or introdued by WikiPeople are in italics and underlined):
 
-| ITEM | DESCRIPTION | 
+| Item | Description | 
 | :-: | - |
 | P166 | The id of the relation "award received" |
 | <ins>*P166_h*</ins> | The id of the subject role of "award received" |
