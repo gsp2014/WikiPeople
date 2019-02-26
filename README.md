@@ -53,9 +53,9 @@ The detailed description of `Line 37714` is as follows (items newly defined or i
 
 ### When using the dataset, please cite:
 
-    @inproceedings{nakr,
+    @inproceedings{NaLP,
       title={Link prediction on n-ary relational data},
-      author={Saiping Guan, Xiaolong Jin, Yuanzhuo Wang and Xueqi Cheng},
+      author={Guan, Saiping and Jin, Xiaolong and Wang, Yuanzhuo and Cheng, Xueqi},
       booktitle={Proceedings of the 28th International Conference on World Wide Web (WWW'19)},
       year={2019}  
     }
