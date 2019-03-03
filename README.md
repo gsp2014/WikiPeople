@@ -1,4 +1,4 @@
-## WikiPeople: An n-ary relational dataset derived from Wikidata
+## WikiPeople: An n-ary relational dataset about people derived from Wikidata
 
 
 WikiPeople was constructed as follows:
@@ -51,13 +51,6 @@ The detailed description of `Line 37714` is as follows (items newly defined or i
 | Q37463 | The id of the value "Pierre Curie" |
 
 
-### When using the dataset, please cite:
-
-    @inproceedings{NaLP,
-      title={Link prediction on n-ary relational data},
-      author={Guan, Saiping and Jin, Xiaolong and Wang, Yuanzhuo and Cheng, Xueqi},
-      booktitle={Proceedings of the 28th International Conference on World Wide Web (WWW'19)},
-      year={2019}  
-    }
+### When using the dataset, please cite https://github.com/gsp2014/WikiPeople.
     
 For any questions, please contact guansaiping@ict.ac.cn or jinxiaolong@ict.ac.cn, or open an issue.
