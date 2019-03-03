@@ -5,7 +5,7 @@ WikiPeople was constructed as follows:
 + The [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) was downloaded and the facts concerning entities of type `human` were extracted.
 + Then, these facts were denoised. For example, facts containing element related to image were filtered out, and facts containing element in {*unknown value*, *no values*} were removed.
 + Subsequently, the subsets of elements which have at least 30 mentions were selected. And the facts related to these elements were kept. Further, each fact was parsed into a set of its role-value pairs.
-+ The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%:10%: 10%.
++ The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%:10%:10%.
 
 
 The statistics of WikiPeople are displayed as follows, where #Train, #Valid and #Test are the sizes of the training set, the validation set and the test set, respectively.
