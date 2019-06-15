@@ -51,7 +51,7 @@ The detailed description of `Line 37714` is as follows (items newly defined or i
 | Q37463 | The id of the value "Pierre Curie" |
 
 
-### When using the dataset, please cite https://github.com/gsp2014/WikiPeople.
+### When using the dataset, please cite:
 
     @inproceedings{NaLP,
       title={Link prediction on n-ary relational data},
