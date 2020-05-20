@@ -1,4 +1,4 @@
-## WikiPeople: An n-ary relational dataset about people derived from Wikidata
+## WikiPeople and WikiPeople-n: N-ary relational datasets about people derived from Wikidata
 
 
 WikiPeople was constructed as follows:
@@ -50,8 +50,21 @@ The detailed description of `Line 37714` is as follows (items newly defined or i
 | Q41269 | The id of the value "Henri Becquerel" |
 | Q37463 | The id of the value "Pierre Curie" |
 
+### Derive WikiPeople-n from WikiPeople
+Since on WikiPeople, the proportion of n-ary relational facts is low (less than 12%), a new dataset, WikiPeople-n, was derived from WikiPeople. Detailedly, based on WikiPeople, all the n-ary relational facts were kept, and some binary relational facts were randomly removed to obtain the same proportion of binary and n-ary categories as in the training set on [JF17K](https://github.com/lijp12/SIR).
 
-### When using the dataset, please cite:
+
+The statistics of WikiPeople-n are displayed as follows:
+
+|  | Binary | N-ary | Overall |
+| :-: | :-: | :-: | :-: |
+| #Train | 48,851 | 35,546 | 84,397 |
+| #Valid | 6,190 | 4,248 | 10,438 |
+| #Test | 6,186 | 4,264 | 10,450 |
+
+Note that, binary relational facts from the training set, and then the validation set and the test set, were randomly removed respectively. After removing some binary relational facts from the training set, some elements (roles/values) may only exist in the validation/test set. The facts in the validation set and the test set, which contain these elements, were removed first, before conducting random removal.
+
+### When using the datasets, please cite:
 
     @inproceedings{NaLP,
       title={Link prediction on n-ary relational data},
