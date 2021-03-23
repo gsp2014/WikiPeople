@@ -5,7 +5,7 @@ WikiPeople was constructed as follows:
 + The [Wikidata dump](https://archive.org/details/wikibase-wikidatawiki-20171120) was downloaded and the facts concerning entities of type `human` were extracted.
 + Then, these facts were denoised. For example, facts containing element related to image were filtered out, and facts containing element in {*unknown value*, *no values*} were removed.
 + Subsequently, the subsets of elements which have at least 30 mentions were selected. And the facts related to these elements were kept. Further, each fact was parsed into a set of its role-value pairs.
-+ The remaining facts were randomly split into training set, validation set and test set by a proportion of 80%:10%:10%.
++ The remaining facts were randomly split into training set, validation set and test set by a percentage of 80%:10%:10%.
 
 
 The statistics of WikiPeople are displayed as follows, where #Train, #Valid and #Test are the sizes of the training set, the validation set and the test set, respectively.
@@ -51,7 +51,7 @@ The detailed description of `Line 37714` is as follows (items newly defined or i
 | Q37463 | The id of the value "Pierre Curie" |
 
 ### Derive WikiPeople-n from WikiPeople
-Since on WikiPeople, the proportion of n-ary relational facts is low (less than 12%), a new dataset, WikiPeople-n, was derived from WikiPeople. Detailedly, based on WikiPeople, all the n-ary relational facts were kept, and some binary relational facts were randomly removed to obtain the same proportion of binary and n-ary categories as in the training set on [JF17K](https://github.com/lijp12/SIR).
+Since on WikiPeople, the percentage of n-ary relational facts is low (less than 12%), a new dataset, WikiPeople-n, was derived from WikiPeople. Detailedly, based on WikiPeople, all the n-ary relational facts were kept, and some binary relational facts were randomly removed to obtain the same percentage of binary and n-ary categories as in the training set on [JF17K](https://github.com/lijp12/SIR).
 
 
 The statistics of WikiPeople-n are displayed as follows:
@@ -63,6 +63,52 @@ The statistics of WikiPeople-n are displayed as follows:
 | #Test | 6,186 | 4,264 | 10,450 |
 
 Note that, binary relational facts from the training set, and then the validation set and the test set, were randomly removed respectively. After removing some binary relational facts from the training set, some elements (roles/values) may only exist in the validation/test set. The facts in the validation set and the test set, which contain these elements, were removed first, before conducting random removal.
+
+### Further vary the percentage of binary relational facts in WikiPeople
+We vary the percentage (0%, 50%, and 100%) of binary relational facts in WikiPeople to get three datasets, WikiPeople-0bi, WikiPeople-50bi, and WikiPeople-100bi, respectively.
+
+The statistics of these three datasets are presented as follows:
+
+<table>
+  <tr>
+    <td><b>Dataset</b></td>
+    <td><b>WikiPeople-0bi</b></td>
+    <td colspan="3"><b>WikiPeople-50bi</b></td>
+    <td><b>WikiPeople-100bi</b></td>
+  </tr>
+  <tr>
+    <td><b>Category</b></td>
+    <td><b>N-ary/Overall</b></td>
+    <td><b>Binary</b></td>
+    <td><b>N-ary</b></td>
+    <td><b>Overall</b></td>
+    <td><b>Binary/Overall</b></td>
+  </tr>
+  <tr>
+    <td>#Train</td>
+    <td>35,546</td>
+    <td>35,590</td>
+    <td>35,546</td>
+    <td>71,136</td>
+    <td>270,179</td>
+  </tr>
+  <tr>
+    <td>#Valid</td>
+    <td>3,912</td>
+    <td>4,234</td>
+    <td>4,218</td>
+    <td>8,452</td>
+    <td>33,649</td>
+  </tr>
+  <tr>
+    <td>#Test</td>
+    <td>3,930</td>
+    <td>4,253</td>
+    <td>4,228</td>
+    <td>8,481</td>
+    <td>33,694</td>
+  </tr>
+</table>
 
 ### When using the datasets, please cite:
 
