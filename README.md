@@ -1,4 +1,4 @@
-## WikiPeople and WikiPeople-n: N-ary relational datasets about people derived from Wikidata
+## WikiPeople and its derivatives: N-ary relational datasets about people derived from Wikidata
 
 
 WikiPeople was constructed as follows:
